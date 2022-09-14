@@ -1,4 +1,4 @@
-import { Alert as MuiAlert, AlertTitle } from '@mui/material'
+import { Alert as MuiAlert, AlertTitle, Link } from '@mui/material'
 import { useLayoutEffect } from 'react'
 import { useAlertManager } from './AlertManager'
 import { IAlert, AlertActions } from './types'
@@ -32,7 +32,7 @@ const Alert = ({
 		data-testid={id}
 	>
 		{alertTitle && <AlertTitle><strong>{alertTitle}</strong></AlertTitle>}
-		{text}
+		{link ? <Link href={link} color='inherit' target='_blank' underline="always">{text}</Link> : text}
 	</MuiAlert>
 }
 
