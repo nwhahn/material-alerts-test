@@ -1,15 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import { ThemeProvider, CssBaseline } from '@mui/material'
 import App from './App'
+import theme from './styles/theme'
 import reportWebVitals from './reportWebVitals'
+import './index.css'
+import { AlertProvider } from './alerts/AlertContext'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 )
 root.render(
 	<React.StrictMode>
-		<App />
+		<ThemeProvider theme={theme}>
+			<CssBaseline />
+			<AlertProvider>
+				<App />
+			</AlertProvider>
+		</ThemeProvider>
 	</React.StrictMode>
 )
 
