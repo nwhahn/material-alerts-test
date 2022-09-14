@@ -1,23 +1,12 @@
-import './App.css'
+import { memo } from 'react'
+import AlertManager from './alerts/AlertManager'
+import AlertExample from './pages/AlertExample'
 
 function App() {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<p>
-          Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-          Learn React
-				</a>
-			</header>
-		</div>
-	)
+	return <>
+		<AlertExample />
+		<AlertManager />
+	</>
 }
 
-export default App
+export default memo(App)
