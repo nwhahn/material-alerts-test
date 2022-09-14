@@ -131,7 +131,7 @@ const AlertExample = () => {
 					name='alertTitle' 
 					label='Title'
 					fullWidth 
-					value={alertTitle} 
+					value={alertTitle || ''} 
 					onChange={(e) => updateForm({ type: ActionType.UPDATE, payload: { fieldName: 'alertTitle', value: e?.target?.value  }})}
 				/>
 				{/** Alert Text  */}
